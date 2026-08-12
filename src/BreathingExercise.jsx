@@ -196,17 +196,6 @@ export default function BreathingExercise() {
           {showTimer ? Math.ceil(state.timeRemaining / 1000) : ''}
         </div>
       )}
-
-      {showDots && (
-        <div className="progress-dots" aria-hidden="true">
-          {[1, 2, 3, 4].map((dot) => (
-            <div 
-              key={dot} 
-              className={`dot ${dot <= state.round ? 'active' : 'inactive'}`} 
-            />
-          ))}
-        </div>
-      )}
       
       {state.phase === PHASES.IDLE && (
         <div className="hint-text">
